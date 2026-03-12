@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" height="320" width="1200">
+  <defs>
+    <linearGradient y2="1" x2="1" y1="0" x1="0" id="bg">
+      <stop stop-color="#0d1117" offset="0%"></stop>
+      <stop stop-color="#0d1117" offset="100%"></stop>
+    </linearGradient>
+    <pattern patternUnits="userSpaceOnUse" height="40" width="40" id="grid">
+      <path stroke-width="1" stroke="#21262d" fill="none" d="M 40 0 L 0 0 0 40"></path>
+    </pattern>
+  </defs>
+  
+  <rect rx="20" fill="url(#bg)" height="100%" width="100%"></rect>
+  <rect opacity="0.25" fill="url(#grid)" height="100%" width="100%"></rect>
+  
+  <text font-weight="700" fill="#c9d1d9" font-size="48" font-family="Inter, Arial, sans-serif" text-anchor="middle" y="120" x="50%">
+        Hi, I'm Lohith
+        <tspan fill="#39d353"> Srinivasaiah</tspan>
+  </text>
+  
+  <text fill="#8b949e" font-size="22" font-family="Inter, Arial, sans-serif" text-anchor="middle" y="170" x="50%">
+        Senior Software Engineer | AI Systems
+  </text>
+  
+  <text fill="#6e7681" font-size="16" font-family="Inter, Arial, sans-serif" text-anchor="middle" y="205" x="50%">
+        I build AI-powered platforms, developer tools, and scalable backend systems.
+  </text>
+  
+  <g transform="translate(360,230)">
+    
+    <rect fill="#39d353" rx="8" height="40" width="160" y="0" x="0"></rect>
+    <text fill="#ffffff" font-size="14" font-family="Inter" text-anchor="middle" y="25" x="80">
+      View Experience
+    </text>
+    
+    <rect fill="#21262d" rx="8" height="40" width="130" y="0" x="180"></rect>
+    <text fill="#c9d1d9" font-size="14" font-family="Inter" text-anchor="middle" y="25" x="245">
+      Ask My AI
+    </text>
+    
+    <rect fill="#21262d" rx="8" height="40" width="110" y="0" x="330"></rect>
+    <text fill="#c9d1d9" font-size="14" font-family="Inter" text-anchor="middle" y="25" x="385">
+      GitHub
+    </text>
+    
+    <rect fill="#21262d" rx="8" height="40" width="120" y="0" x="460"></rect>
+    <text fill="#c9d1d9" font-size="14" font-family="Inter" text-anchor="middle" y="25" x="520">
+      Contact
+    </text>
+  </g>
+</svg>
