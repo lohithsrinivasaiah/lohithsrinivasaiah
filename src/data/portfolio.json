@@ -1,0 +1,256 @@
+{
+  "profile": {
+    "name": "Lohith Srinivasaiah",
+    "username": "lohithsrinivasaiah",
+    "title": "Python Developer",
+    "avatar": "LS",
+    "heroSubtitle": "Senior Software Engineer | AI Systems",
+    "heroTagline": "I build AI-powered platforms, developer tools, and scalable backend systems."
+  },
+  "experience": [
+    {
+      "id": 1,
+      "company": "Leah AI (Formerly ContractPodAi)",
+      "companyLogo": "https://www.google.com/s2/favicons?domain=contractpodai.com&sz=64",
+      "companyDuration": "11 mos",
+      "type": "work",
+      "roles": [
+        {
+          "title": "Senior Software Engineer",
+          "timeline": "May 2025 - Present",
+          "duration": "11 mos",
+          "location": "Remote",
+          "summary": "Building AI-powered solutions with focus on LLMs and agentic AI.",
+          "achievements": [],
+          "technologies": ["Large Language Models (LLM)", "Agentic AI"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "company": "PrimeSoft Solutions, Inc.",
+      "companyLogo": "https://primesoft.net/favicon.ico",
+      "companyDuration": "1 yr 4 mos",
+      "type": "work",
+      "roles": [
+        {
+          "title": "Senior Software Engineer (Generative-AI)",
+          "timeline": "Oct 2024 - Apr 2025",
+          "duration": "7 mos",
+          "location": "Bengaluru, Karnataka, India",
+          "summary": "Designed and developed an AI-powered chatbot using LLMs for user onboarding and in-app navigation.",
+          "achievements": [
+            "Designed and developed an AI-powered chatbot using LLMs for user onboarding and in-app navigation",
+            "Built modular NLP components to enhance contextual understanding and response quality",
+            "Integrated backend services to optimize system scalability and maintainability"
+          ],
+          "technologies": ["Python", "LangChain", "LlamaIndex", "OpenAI API", "Groq", "Grok", "Large Language Models (LLM)", "SQLAlchemy"]
+        },
+        {
+          "title": "Senior Software Engineer (Test-Automation)",
+          "timeline": "Apr 2024 - Oct 2024",
+          "duration": "7 mos",
+          "location": "Bengaluru, Karnataka, India",
+          "summary": "Automated configuration and validation processes for networking hardware, reducing manual testing efforts by 60%.",
+          "achievements": [
+            "Automated configuration and validation processes for networking hardware, reducing manual testing efforts by 60%",
+            "Developed a custom test automation framework to improve test coverage, efficiency, and reliability",
+            "Enhanced release cycles by improving overall test coverage and efficiency"
+          ],
+          "technologies": ["Python", "Linux", "Router Configuration", "Switch Configuration", "Test Automation", "SSH"]
+        },
+        {
+          "title": "Senior Software Engineer (Django/DRF)",
+          "timeline": "Jan 2024 - Apr 2024",
+          "duration": "4 mos",
+          "location": "Bengaluru, Karnataka, India",
+          "summary": "Architected and developed scalable loan application platform using Django and DRF.",
+          "achievements": [
+            "Architected and developed scalable loan application platform using Django and DRF",
+            "Collaborated with cross-functional teams to deliver high-performance features",
+            "Wrote comprehensive unit and integration tests for deployment readiness",
+            "Ensured secure features by working closely with QA and DevOps teams"
+          ],
+          "technologies": ["Bitbucket", "AWS", "Django REST Framework", "AWS Lambda", "Amazon S3"]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "company": "DATA TEMPLATE",
+      "companyLogo": "https://www.google.com/s2/favicons?domain=datatemplate.com&sz=64",
+      "companyDuration": "4 yrs",
+      "type": "work",
+      "roles": [
+        {
+          "title": "Django/DRF Developer (Python)",
+          "timeline": "Mar 2023 - Jan 2024",
+          "duration": "11 mos",
+          "location": "Greater Bengaluru Area, Hybrid",
+          "summary": "Developed RESTful APIs and integrated Razorpay for secure payments at RealtyCare.",
+          "achievements": [
+            "Developed RESTful APIs and integrated Razorpay for secure payments at RealtyCare",
+            "Implemented authentication and user management features for improved security"
+          ],
+          "technologies": ["Jinja", "Django", "Django REST Framework", "PostgreSQL", "MongoDB", "MySQL", "Postman API", "Swagger API"]
+        },
+        {
+          "title": "Junior Software Developer (Python & GoLang)",
+          "timeline": "Aug 2021 - Mar 2023",
+          "duration": "1 yr 8 mos",
+          "location": "Greater Bengaluru Area, Hybrid",
+          "summary": "Enhanced Leap Motion-based simulation tools with a custom data fusion algorithm (Kabsch) to enable intuitive user experiences through natural gesture tracking.",
+          "achievements": [
+            "Enhanced Leap Motion-based simulation tools with a custom data fusion algorithm (Kabsch) to enable intuitive user experiences through natural gesture tracking",
+            "Developed backend modules in Go for IPv6 networking support, implementing TDD practices and automated deployments via Jenkins"
+          ],
+          "technologies": ["Go", "Test-Driven Development", "Jenkins", "Bitbucket", "AWS", "Python", "GitHub"]
+        },
+        {
+          "title": "Associate Software Developer (Python)",
+          "timeline": "Feb 2020 - Aug 2021",
+          "duration": "1 yr 7 mos",
+          "location": "Greater Bengaluru Area, Hybrid",
+          "summary": "Migrated legacy Python 2 codebase to Python 3 for the ViaSat Content Delivery System.",
+          "achievements": [
+            "Migrated legacy Python 2 codebase to Python 3 for the ViaSat Content Delivery System",
+            "Introduced BDD with Behave to enhance collaboration and clarity in testing processes",
+            "Set up automated CI/CD pipelines for reliable software releases"
+          ],
+          "technologies": ["Python", "Jenkins", "CI/CD", "Test Automation", "Behavior-Driven Development (BDD)"]
+        }
+      ]
+    }
+  ],
+  "about": {
+    "bio": [
+      "Hi! I'm Lohith, a Python developer specializing in Django, FastAPI, and LLM-powered agentic AI systems. I build scalable backend services and intelligent applications that solve real-world problems.",
+      "My experience spans RESTful APIs, AI chatbots, and agentic workflows. I focus on clean architecture, high-quality code, and leveraging LLMs to create impactful solutions.",
+      "When I'm not coding, you'll find me exploring the latest in AI and agent frameworks, writing technical blog posts, or contributing to the Python and AI developer community."
+    ],
+    "highlights": [
+      {
+        "icon": "Award",
+        "title": "6+ Years Experience",
+        "description": "Python, Django & FastAPI"
+      },
+      {
+        "icon": "BookOpen",
+        "title": "LLM & Agentic AI",
+        "description": "Building intelligent agent systems"
+      },
+      {
+        "icon": "Coffee",
+        "title": "Backend Specialist",
+        "description": "Scalable APIs and services"
+      }
+    ],
+    "skills": [
+      {
+        "category": "Languages",
+        "icon": "Code2",
+        "items": ["Python", "SQL"]
+      },
+      {
+        "category": "AI & LLM",
+        "icon": "Zap",
+        "items": ["Large Language Models (LLM)", "Agentic AI", "LangChain", "LlamaIndex", "OpenAI API", "Groq", "SQLAlchemy"]
+      },
+      {
+        "category": "Backend",
+        "icon": "Terminal",
+        "items": ["Django", "Django REST Framework", "FastAPI", "PostgreSQL", "MongoDB", "MySQL", "Jinja"]
+      },
+      {
+        "category": "Testing",
+        "icon": "BookOpen",
+        "items": ["Test Automation", "TDD", "BDD", "Postman API", "Swagger API"]
+      },
+      {
+        "category": "Tools & Cloud",
+        "icon": "Award",
+        "items": ["AWS", "AWS Lambda", "Amazon S3", "Jenkins", "Bitbucket", "GitHub", "CI/CD", "Docker", "Linux", "SSH"]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "name": "DevConnect Platform",
+      "description": "A real-time collaboration platform for developers to pair program and share knowledge.",
+      "techStack": ["Next.js", "WebRTC", "Supabase"],
+      "link": "#",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": "AI Code Reviewer",
+      "description": "Machine learning tool that analyzes pull requests and provides intelligent code suggestions.",
+      "techStack": ["Python", "OpenAI", "FastAPI"],
+      "link": "#",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "name": "Design System Builder",
+      "description": "Automated tool to generate design systems from Figma files with React components.",
+      "techStack": ["TypeScript", "Figma API", "React"],
+      "link": "#",
+      "status": "completed"
+    },
+    {
+      "id": 4,
+      "name": "Performance Monitor",
+      "description": "Real-time web performance monitoring dashboard with actionable insights.",
+      "techStack": ["Node.js", "WebSockets", "D3.js"],
+      "link": "#",
+      "status": "completed"
+    }
+  ],
+  "projectStats": {
+    "totalProjects": "12+",
+    "githubStars": "8.5k+",
+    "contributions": "150+",
+    "openSource": "24"
+  },
+  "contact": {
+    "availability": {
+      "status": "Open to opportunities",
+      "location": "Bengaluru, India",
+      "timezone": "IST (UTC+5:30)"
+    },
+    "methods": [
+      {
+        "icon": "Mail",
+        "label": "Email",
+        "value": "lohith.srinivasaiah@outlook.com",
+        "link": "mailto:lohith.srinivasaiah@outlook.com",
+        "primary": true
+      },
+      {
+        "icon": "Github",
+        "label": "GitHub",
+        "value": "github.com/lohithsrinivasaiah",
+        "link": "https://github.com/lohithsrinivasaiah"
+      },
+      {
+        "icon": "Linkedin",
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/lohithsrinivasaiah",
+        "link": "https://linkedin.com/in/lohithsrinivasaiah"
+      },
+      {
+        "icon": "X",
+        "label": "X",
+        "value": "@lohithswastaken",
+        "link": "https://x.com/lohithswastaken"
+      }
+    ],
+    "cta": {
+      "title": "Want to collaborate?",
+      "description": "I'm currently available for freelance projects and consulting opportunities."
+    },
+    "responseTime": "~24h",
+    "responseDescription": "Usually responds within 24 hours"
+  }
+}
