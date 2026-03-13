@@ -10,6 +10,7 @@ interface Position {
   duration: string;
   location?: string;
   summary: string;
+  achievements: string[];
   technologies: string[];
   type: 'work' | 'education';
 }
@@ -89,6 +90,13 @@ function PositionBlock({
             </button>
           )}
         </p>
+        {position.achievements.length > 0 && (
+          <ul className="list-disc list-inside text-sm text-[#c9d1d9] space-y-1 mb-3 ml-1">
+            {position.achievements.map((achievement, i) => (
+              <li key={i} className="leading-relaxed">{achievement}</li>
+            ))}
+          </ul>
+        )}
         <div className="flex flex-wrap gap-2">
           {position.technologies.map((tech) => (
             <span

@@ -197,6 +197,7 @@ export function getExperience() {
         duration: role.duration,
         location: role.location,
         summary: role.summary,
+        achievements: role.achievements ?? [],
         technologies: role.technologies,
         type: exp.type,
       };

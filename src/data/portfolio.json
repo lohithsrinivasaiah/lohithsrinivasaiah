@@ -2,15 +2,15 @@
   "profile": {
     "name": "Lohith Srinivasaiah",
     "username": "lohithsrinivasaiah",
-    "title": "Python Developer",
+    "title": "Senior Software Engineer",
     "avatar": "LS",
-    "heroSubtitle": "Senior Software Engineer | AI Systems",
-    "heroTagline": "I build AI-powered platforms, developer tools, and scalable backend systems."
+    "heroSubtitle": "AI Systems | Backend & LLM Engineering",
+    "heroTagline": "Designing and delivering AI-powered platforms, developer tools, and scalable backend systems."
   },
   "experience": [
     {
       "id": 1,
-      "company": "Leah AI (Formerly ContractPodAi)",
+      "company": "Leah (formerly ContractPodAi)",
       "companyLogo": "https://www.google.com/s2/favicons?domain=contractpodai.com&sz=64",
       "companyDuration": "11 mos",
       "type": "work",
@@ -20,8 +20,11 @@
           "timeline": "May 2025 - Present",
           "duration": "11 mos",
           "location": "Remote",
-          "summary": "Building AI-powered solutions with focus on LLMs and agentic AI.",
-          "achievements": [],
+          "summary": "Designing and implementing AI-powered solutions with emphasis on large language models and agentic AI systems.",
+          "achievements": [
+            "Designing and implementing AI-powered solutions with emphasis on large language models and agentic AI systems",
+            "Contributing to enterprise-scale agentic workflows, prompt engineering, and LLM integration across the platform"
+          ],
           "technologies": ["Large Language Models (LLM)", "Agentic AI"]
         }
       ]
@@ -38,11 +41,11 @@
           "timeline": "Oct 2024 - Apr 2025",
           "duration": "7 mos",
           "location": "Bengaluru, Karnataka, India",
-          "summary": "Designed and developed an AI-powered chatbot using LLMs for user onboarding and in-app navigation.",
+          "summary": "Led design and development of an LLM-powered chatbot for user onboarding and in-app navigation.",
           "achievements": [
-            "Designed and developed an AI-powered chatbot using LLMs for user onboarding and in-app navigation",
-            "Built modular NLP components to enhance contextual understanding and response quality",
-            "Integrated backend services to optimize system scalability and maintainability"
+            "Architected and delivered an AI-powered chatbot using LLMs (LangChain, LlamaIndex, OpenAI, Groq) to streamline user onboarding and provide contextual in-app navigation guidance",
+            "Built modular, reusable NLP components with improved prompt engineering and retrieval logic to enhance contextual understanding and response quality across user interactions",
+            "Integrated and orchestrated backend services with proper abstraction layers to improve system scalability, maintainability, and deployment flexibility"
           ],
           "technologies": ["Python", "LangChain", "LlamaIndex", "OpenAI API", "Groq", "Grok", "Large Language Models (LLM)", "SQLAlchemy"]
         },
@@ -51,11 +54,11 @@
           "timeline": "Apr 2024 - Oct 2024",
           "duration": "7 mos",
           "location": "Bengaluru, Karnataka, India",
-          "summary": "Automated configuration and validation processes for networking hardware, reducing manual testing efforts by 60%.",
+          "summary": "Automated configuration and validation workflows for networking hardware, reducing manual testing effort by 60%.",
           "achievements": [
-            "Automated configuration and validation processes for networking hardware, reducing manual testing efforts by 60%",
-            "Developed a custom test automation framework to improve test coverage, efficiency, and reliability",
-            "Enhanced release cycles by improving overall test coverage and efficiency"
+            "Automated configuration and validation processes for routers and switches via SSH, reducing manual testing effort by 60% and enabling faster hardware qualification cycles",
+            "Developed a custom Python-based test automation framework with reusable fixtures and reporting to increase test coverage, efficiency, and reliability across networking test suites",
+            "Accelerated release cycles by improving end-to-end test coverage and streamlining validation workflows, reducing time-to-release for hardware certification"
           ],
           "technologies": ["Python", "Linux", "Router Configuration", "Switch Configuration", "Test Automation", "SSH"]
         },
@@ -64,12 +67,12 @@
           "timeline": "Jan 2024 - Apr 2024",
           "duration": "4 mos",
           "location": "Bengaluru, Karnataka, India",
-          "summary": "Architected and developed scalable loan application platform using Django and DRF.",
+          "summary": "Architected and delivered a scalable loan application platform using Django and Django REST Framework.",
           "achievements": [
-            "Architected and developed scalable loan application platform using Django and DRF",
-            "Collaborated with cross-functional teams to deliver high-performance features",
-            "Wrote comprehensive unit and integration tests for deployment readiness",
-            "Ensured secure features by working closely with QA and DevOps teams"
+            "Architected and developed a scalable loan application platform using Django and Django REST Framework, with AWS Lambda and S3 for serverless processing and document storage",
+            "Collaborated with product, design, and QA across the full development lifecycle to deliver high-performance features on schedule and within scope",
+            "Implemented comprehensive unit and integration tests with high coverage to ensure deployment readiness and reduce production defects",
+            "Partnered with QA and DevOps to implement security best practices, code reviews, and CI/CD workflows for production-ready feature delivery"
           ],
           "technologies": ["Bitbucket", "AWS", "Django REST Framework", "AWS Lambda", "Amazon S3"]
         }
@@ -77,7 +80,7 @@
     },
     {
       "id": 3,
-      "company": "DATA TEMPLATE",
+      "company": "Data Template Infotech Private Limited",
       "companyLogo": "https://www.google.com/s2/favicons?domain=datatemplate.com&sz=64",
       "companyDuration": "4 yrs",
       "type": "work",
@@ -87,10 +90,10 @@
           "timeline": "Mar 2023 - Jan 2024",
           "duration": "11 mos",
           "location": "Greater Bengaluru Area, Hybrid",
-          "summary": "Developed RESTful APIs and integrated Razorpay for secure payments at RealtyCare.",
+          "summary": "Developed RESTful APIs and integrated Razorpay for secure payment processing at RealtyCare.",
           "achievements": [
-            "Developed RESTful APIs and integrated Razorpay for secure payments at RealtyCare",
-            "Implemented authentication and user management features for improved security"
+            "Designed and implemented RESTful APIs with Razorpay integration for secure payment processing at RealtyCare, including webhook handling, refund flows, and transaction logging",
+            "Implemented JWT-based authentication, role-based access control, and user management features to strengthen application security and support multi-tenant workflows"
           ],
           "technologies": ["Jinja", "Django", "Django REST Framework", "PostgreSQL", "MongoDB", "MySQL", "Postman API", "Swagger API"]
         },
@@ -99,10 +102,10 @@
           "timeline": "Aug 2021 - Mar 2023",
           "duration": "1 yr 8 mos",
           "location": "Greater Bengaluru Area, Hybrid",
-          "summary": "Enhanced Leap Motion-based simulation tools with a custom data fusion algorithm (Kabsch) to enable intuitive user experiences through natural gesture tracking.",
+          "summary": "Enhanced Leap Motion-based simulation tools with a custom Kabsch data fusion algorithm for natural gesture tracking and intuitive user experiences.",
           "achievements": [
-            "Enhanced Leap Motion-based simulation tools with a custom data fusion algorithm (Kabsch) to enable intuitive user experiences through natural gesture tracking",
-            "Developed backend modules in Go for IPv6 networking support, implementing TDD practices and automated deployments via Jenkins"
+            "Integrated a custom Kabsch data fusion algorithm into Leap Motion-based simulation tools to enable accurate natural gesture tracking, reducing drift and improving the intuitiveness of user interactions",
+            "Developed Go backend modules for IPv6 networking support, following TDD practices and establishing Jenkins-based automated build and deployment pipelines for continuous delivery"
           ],
           "technologies": ["Go", "Test-Driven Development", "Jenkins", "Bitbucket", "AWS", "Python", "GitHub"]
         },
@@ -111,11 +114,11 @@
           "timeline": "Feb 2020 - Aug 2021",
           "duration": "1 yr 7 mos",
           "location": "Greater Bengaluru Area, Hybrid",
-          "summary": "Migrated legacy Python 2 codebase to Python 3 for the ViaSat Content Delivery System.",
+          "summary": "Led migration of a legacy Python 2 codebase to Python 3 for the ViaSat Content Delivery System.",
           "achievements": [
-            "Migrated legacy Python 2 codebase to Python 3 for the ViaSat Content Delivery System",
-            "Introduced BDD with Behave to enhance collaboration and clarity in testing processes",
-            "Set up automated CI/CD pipelines for reliable software releases"
+            "Led migration of a legacy Python 2 codebase to Python 3 for the ViaSat Content Delivery System, addressing compatibility issues, deprecated APIs, and updating dependencies while preserving system behavior",
+            "Introduced BDD with Behave to improve collaboration between developers and stakeholders, and to provide clear, executable specifications that doubled as living documentation",
+            "Established automated CI/CD pipelines with Jenkins for build, test, and deployment stages, enabling reliable and repeatable software releases with reduced manual intervention"
           ],
           "technologies": ["Python", "Jenkins", "CI/CD", "Test Automation", "Behavior-Driven Development (BDD)"]
         }
@@ -124,25 +127,25 @@
   ],
   "about": {
     "bio": [
-      "Hi! I'm Lohith, a Python developer specializing in Django, FastAPI, and LLM-powered agentic AI systems. I build scalable backend services and intelligent applications that solve real-world problems.",
-      "My experience spans RESTful APIs, AI chatbots, and agentic workflows. I focus on clean architecture, high-quality code, and leveraging LLMs to create impactful solutions.",
-      "When I'm not coding, you'll find me exploring the latest in AI and agent frameworks, writing technical blog posts, or contributing to the Python and AI developer community."
+      "I am a Senior Software Engineer specializing in Python, Django, FastAPI, and LLM-powered agentic AI systems. I design and build scalable backend services and intelligent applications that address real-world challenges.",
+      "My experience spans RESTful APIs, AI chatbots, and agentic workflows. I emphasize clean architecture, maintainable code, and effective use of large language models to deliver measurable impact.",
+      "Outside of work, I stay current with AI and agent frameworks, write technical content, and contribute to the Python and AI developer community."
     ],
     "highlights": [
       {
         "icon": "Award",
         "title": "6+ Years Experience",
-        "description": "Python, Django & FastAPI"
+        "description": "Python, Django, and FastAPI"
       },
       {
         "icon": "BookOpen",
         "title": "LLM & Agentic AI",
-        "description": "Building intelligent agent systems"
+        "description": "Designing and implementing intelligent agent systems"
       },
       {
         "icon": "Coffee",
         "title": "Backend Specialist",
-        "description": "Scalable APIs and services"
+        "description": "Scalable APIs and distributed services"
       }
     ],
     "skills": [
@@ -185,7 +188,7 @@
     {
       "id": 2,
       "name": "AI Code Reviewer",
-      "description": "Machine learning tool that analyzes pull requests and provides intelligent code suggestions.",
+      "description": "ML-powered tool that analyzes pull requests and provides actionable code suggestions.",
       "techStack": ["Python", "OpenAI", "FastAPI"],
       "link": "#",
       "status": "active"
@@ -193,7 +196,7 @@
     {
       "id": 3,
       "name": "Design System Builder",
-      "description": "Automated tool to generate design systems from Figma files with React components.",
+      "description": "Automated pipeline that generates design systems from Figma files with React components.",
       "techStack": ["TypeScript", "Figma API", "React"],
       "link": "#",
       "status": "completed"
@@ -201,7 +204,7 @@
     {
       "id": 4,
       "name": "Performance Monitor",
-      "description": "Real-time web performance monitoring dashboard with actionable insights.",
+      "description": "Real-time web performance monitoring dashboard delivering actionable insights.",
       "techStack": ["Node.js", "WebSockets", "D3.js"],
       "link": "#",
       "status": "completed"
@@ -247,10 +250,10 @@
       }
     ],
     "cta": {
-      "title": "Want to collaborate?",
-      "description": "I'm currently available for freelance projects and consulting opportunities."
+      "title": "Open to collaboration",
+      "description": "Available for freelance projects and consulting opportunities."
     },
     "responseTime": "~24h",
-    "responseDescription": "Usually responds within 24 hours"
+    "responseDescription": "Typically responds within 24 hours"
   }
 }
