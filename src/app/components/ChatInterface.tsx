@@ -18,6 +18,12 @@ import {
   DialogTitle,
 } from './ui/dialog';
 type ResponseType = 'recruiter' | 'techie' | 'startupFounder' | 'roast' | 'unhinged';
+type ModeConfig = {
+  model: string;
+  temperature: number;
+  top_p?: number;
+  presence_penalty?: number;
+};
 const RESPONSE_TYPES: { value: ResponseType; label: string }[] = [
   { value: 'recruiter', label: 'Recruiter' },
   { value: 'techie', label: 'Techie' },
@@ -27,7 +33,7 @@ const RESPONSE_TYPES: { value: ResponseType; label: string }[] = [
 ];
 const MODE_WARNINGS: Record<Exclude<ResponseType, 'recruiter'>, string> = {
   techie:
-    'Bro did you complete your work or not? Still debugging the same issue since last sprint or what?',
+    'Bro, why are you here? Still fixing the same Ticket since last sprint or what?',
   startupFounder:
     'Legacy monolith from 2017? Executed at dawn. Replaced with Claude + v0 + "AI vibes" wrapper. Cofounder tears guaranteed. Proceed if you hate peace.',
   roast: 'If your self-esteem is fragile you may want to leave.',
@@ -38,8 +44,8 @@ const MODE_BUTTONS: Record<
   { primary: string; secondary: string }
 > = {
   techie: {
-    primary: 'Arey yaar 5 more mins da… let me in',
-    secondary: 'No da bro, ticket still in progress 😞',
+    primary: 'Ticket ki maa ka bhos— 😤',
+    secondary: 'Yes bro, Let me get back to it 😞',
   },
   startupFounder: {
     primary: 'Nuke it. Tears = feature. Proceed 🔥',
@@ -62,6 +68,34 @@ interface Message {
 type GroqMessage = { role: 'system' | 'user' | 'assistant'; content: string };
 const TYPEWRITER_MS_PER_CHAR = 24;
 const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY as string | undefined;
+const FALLBACK_MODEL = 'llama-3.1-8b-instant';
+const MODE_CONFIG: Record<ResponseType, ModeConfig> = {
+  recruiter: {
+    model: 'openai/gpt-oss-120b',
+    temperature: 0.3,
+    top_p: 0.9,
+  },
+  techie: {
+    model: 'llama-3.3-70b-versatile',
+    temperature: 0.6,
+  },
+  startupFounder: {
+    model: 'moonshotai/kimi-k2-instruct-0905',
+    temperature: 0.6,
+    top_p: 0.95,
+  },
+  roast: {
+    model: 'llama-3.1-8b-instant',
+    temperature: 1.2,
+    top_p: 1,
+  },
+  unhinged: {
+    model: 'llama-3.1-8b-instant',
+    temperature: 1.4,
+    top_p: 1,
+    presence_penalty: 1.0,
+  },
+};
 // Client-side only; use server proxy in production to hide API key
 const groq = GROQ_API_KEY?.trim()
   ? new Groq({ apiKey: GROQ_API_KEY, dangerouslyAllowBrowser: true })
@@ -288,6 +322,23 @@ CONTACT:
 ${contactText}`;
 }
 const MAX_HISTORY_MESSAGES = 20;
+const MAX_RESPONSE_TOKENS = 1024;
+
+function shouldRetryWithFallback(error: unknown): boolean {
+  if (!(error instanceof Error)) return true;
+  const message = error.message.toLowerCase();
+  const retryableSignals = [
+    'model',
+    'not found',
+    'unsupported',
+    'unavailable',
+    'overloaded',
+    'rate limit',
+    'capacity',
+    'timeout',
+  ];
+  return retryableSignals.some((signal) => message.includes(signal));
+}
 
 export function ChatInterface() {
   const [messages, setMessages] = useState<Message[]>([
@@ -380,12 +431,39 @@ export function ChatInterface() {
     ];
 
     try {
-      const completion = await groq.chat.completions.create({
-        model: 'llama-3.3-70b-versatile',
-        messages: apiMessages,
-        max_tokens: 1024,
-        temperature: 0.7,
-      });
+      const modeConfig = MODE_CONFIG[responseType];
+      const createCompletion = (model: string) =>
+        groq.chat.completions.create({
+          model,
+          messages: apiMessages,
+          max_tokens: MAX_RESPONSE_TOKENS,
+          temperature: modeConfig.temperature,
+          ...(modeConfig.top_p !== undefined ? { top_p: modeConfig.top_p } : {}),
+          ...(modeConfig.presence_penalty !== undefined
+            ? { presence_penalty: modeConfig.presence_penalty }
+            : {}),
+        });
+      let completion;
+      try {
+        completion = await createCompletion(modeConfig.model);
+      } catch (primaryError) {
+        const shouldRetry =
+          modeConfig.model !== FALLBACK_MODEL && shouldRetryWithFallback(primaryError);
+        if (!shouldRetry) {
+          throw primaryError;
+        }
+        try {
+          completion = await createCompletion(FALLBACK_MODEL);
+        } catch (fallbackError) {
+          const primaryMessage =
+            primaryError instanceof Error ? primaryError.message : 'Unknown primary error';
+          const fallbackMessage =
+            fallbackError instanceof Error ? fallbackError.message : 'Unknown fallback error';
+          throw new Error(
+            `Chat request failed on primary and fallback models. Primary: ${primaryMessage}. Fallback: ${fallbackMessage}.`
+          );
+        }
+      }
 
       const content =
         completion.choices?.[0]?.message?.content ??
@@ -564,7 +642,7 @@ export function ChatInterface() {
           <DialogFooter className="flex gap-3 pt-4">
             <button
               onClick={handleGoBack}
-              className="px-4 py-2 rounded-md border border-[#30363d] bg-[#0d1117] text-[#c9d1d9] hover:bg-[#21262d] transition-colors text-sm"
+              className="px-4 py-2 rounded-md border border-[#30363d] bg-[#0d1117] text-[#c9d1d9] hover:bg-[#21262d] hover:border-[#8b949e] transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b949e]/35"
             >
               {pendingMode && MODE_BUTTONS[pendingMode]
                 ? MODE_BUTTONS[pendingMode].secondary
@@ -572,7 +650,7 @@ export function ChatInterface() {
             </button>
             <button
               onClick={handleProceedAnyway}
-              className="px-4 py-2 rounded-md bg-[#238636] text-white hover:bg-[#2ea043] transition-colors text-sm"
+              className="px-4 py-2 rounded-md border border-[#cf222e] bg-[#0d1117] text-[#cf222e] hover:border-[#a40e26] hover:bg-[#a40e26] hover:text-white transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#cf222e]/40"
             >
               {pendingMode && MODE_BUTTONS[pendingMode]
                 ? MODE_BUTTONS[pendingMode].primary
