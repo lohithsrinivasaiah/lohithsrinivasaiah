@@ -1,50 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" height="320" width="1200">
+<svg width="1200" height="420" viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg">
+
   <defs>
-    <linearGradient y2="1" x2="1" y1="0" x1="0" id="bg">
-      <stop stop-color="#0d1117" offset="0%"></stop>
-      <stop stop-color="#0d1117" offset="100%"></stop>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#020617"/>
     </linearGradient>
-    <pattern patternUnits="userSpaceOnUse" height="40" width="40" id="grid">
-      <path stroke-width="1" stroke="#21262d" fill="none" d="M 40 0 L 0 0 0 40"></path>
-    </pattern>
+
+    <!-- Card gradient -->
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#070d18"/>
+    </linearGradient>
+
+    <!-- Green accent -->
+    <linearGradient id="greenBtn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+
+    <style>
+      .title { font: 700 40px Inter, system-ui, sans-serif; fill: #e5e7eb;}
+      .title-accent { fill: #22c55e;}
+      .subtitle { font: 500 18px Inter, system-ui, sans-serif; fill:#9ca3af;}
+      .desc { font: 400 15px Inter, system-ui, sans-serif; fill:#9ca3af;}
+      .btn-text { font: 500 14px Inter, system-ui, sans-serif; fill:white;}
+      .btn-text-dark { font: 500 14px Inter, system-ui, sans-serif; fill:#cbd5f5;}
+      .card-title { font: 600 15px Inter, system-ui, sans-serif; fill:#e5e7eb;}
+      .card-desc { font: 400 13px Inter, system-ui, sans-serif; fill:#9ca3af;}
+    </style>
   </defs>
-  
-  <rect rx="20" fill="url(#bg)" height="100%" width="100%"></rect>
-  <rect opacity="0.25" fill="url(#grid)" height="100%" width="100%"></rect>
-  
-  <text font-weight="700" fill="#c9d1d9" font-size="48" font-family="Inter, Arial, sans-serif" text-anchor="middle" y="120" x="50%">
-        Hi, I'm Lohith
-        <tspan fill="#39d353"> Srinivasaiah</tspan>
+
+  <!-- Background -->
+  <rect width="1200" height="420" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="600" y="110" text-anchor="middle" class="title">
+    Hi, I'm Lohith <tspan class="title-accent">Srinivasaiah</tspan>
   </text>
-  
-  <text fill="#8b949e" font-size="22" font-family="Inter, Arial, sans-serif" text-anchor="middle" y="170" x="50%">
-        Senior Software Engineer | AI Systems
+
+  <!-- Subtitle -->
+  <text x="600" y="150" text-anchor="middle" class="subtitle">
+    AI Systems | Backend &amp; LLM Engineering
   </text>
-  
-  <text fill="#6e7681" font-size="16" font-family="Inter, Arial, sans-serif" text-anchor="middle" y="205" x="50%">
-        I build AI-powered platforms, developer tools, and scalable backend systems.
+
+  <!-- Description -->
+  <text x="600" y="185" text-anchor="middle" class="desc">
+    Designing and delivering AI-powered platforms, developer tools, and scalable backend systems.
   </text>
-  
-  <g transform="translate(360,230)">
-    
-    <rect fill="#39d353" rx="8" height="40" width="160" y="0" x="0"></rect>
-    <text fill="#ffffff" font-size="14" font-family="Inter" text-anchor="middle" y="25" x="80">
-      View Experience
-    </text>
-    
-    <rect fill="#21262d" rx="8" height="40" width="130" y="0" x="180"></rect>
-    <text fill="#c9d1d9" font-size="14" font-family="Inter" text-anchor="middle" y="25" x="245">
-      Ask My AI
-    </text>
-    
-    <rect fill="#21262d" rx="8" height="40" width="110" y="0" x="330"></rect>
-    <text fill="#c9d1d9" font-size="14" font-family="Inter" text-anchor="middle" y="25" x="385">
-      GitHub
-    </text>
-    
-    <rect fill="#21262d" rx="8" height="40" width="120" y="0" x="460"></rect>
-    <text fill="#c9d1d9" font-size="14" font-family="Inter" text-anchor="middle" y="25" x="520">
-      Contact
-    </text>
+  <!-- Cards -->
+  <g transform="translate(180,250)">
+
+    <!-- Card 1 -->
+    <g>
+      <rect width="260" height="90" rx="12" fill="url(#card)" stroke="#1f2937"/>
+      <text x="20" y="38" class="card-title">6+ Years Experience</text>
+      <text x="20" y="60" class="card-desc">Python, Django, and FastAPI</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(290,0)">
+      <rect width="260" height="90" rx="12" fill="url(#card)" stroke="#1f2937"/>
+      <text x="20" y="38" class="card-title">LLM &amp; Agentic AI</text>
+      <text x="20" y="60" class="card-desc">Designing and implementing intelligent</text>
+      <text x="20" y="78" class="card-desc"> agent systems</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(580,0)">
+      <rect width="260" height="90" rx="12" fill="url(#card)" stroke="#1f2937"/>
+      <text x="20" y="38" class="card-title">Backend Specialist</text>
+      <text x="20" y="60" class="card-desc">Scalable APIs and distributed services</text>
+    </g>
+
   </g>
+
 </svg>
